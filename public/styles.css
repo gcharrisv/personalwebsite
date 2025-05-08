@@ -1,0 +1,142 @@
+body {
+    background-color: var(--color-background);
+    margin: 0;
+    padding: var(--spacing-page);
+    font-family: var(--font-family-base);
+}
+
+header,
+#site-header {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    padding: var(--spacing-header);
+    box-shadow: var(--shadow-default);
+}
+
+.Name {
+    display: flex;
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--color-text-secondary);
+}
+
+h1,h2,p,
+ul,
+dl,
+a {
+    color: var(--color-text-primary);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--color-hover-bg);
+    border-radius: 2px;
+    padding: 2px 4px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.nav-links.hidden {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#menu-button {
+    display: none;
+    font-size: var(--font-size-heading);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    order: 1;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+    #menu-button {
+        display: block;
+        font-size: var(--font-size-heading);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-text-primary);
+    }
+
+    #site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding-top: var(--spacing-gap-small);
+    }
+
+    .nav-links:not(.hidden) {
+        display: flex;
+    }
+
+    #dark-mode-toggle {
+        order: 1;
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: auto;
+    }
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--spacing-gap-large);
+    margin-top: var(--spacing-gap-large);
+}
+
+.profile-image {
+    max-width: 400px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 6px;
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+@media (min-width: 769px) {
+    #site-header {
+        display: flex;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        padding-left: var(--spacing-gap-medium);
+        align-items: center;
+    }
+}
